@@ -8,7 +8,7 @@ const getLocation = async (req, res) => {
         
         res.json({
             status: location.status,
-            data: location.data,
+            data: location,
         })
 
     } catch (error) {

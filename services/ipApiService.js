@@ -3,7 +3,8 @@ const url = process.env.URL_BASE_IPAPI;
 
 const getLocationWithIp = async (ip) => {
     
-    return await axios.get(`${url}${ip}`);
+    const response = await axios.get(`${url}${ip}`);
+    return response.data
 }
 
 
