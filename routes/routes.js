@@ -2,7 +2,7 @@ const router = require('express').Router();
 const axios = require('axios');
 const getLocation = require('../controllers/controllerLocation');
 
-const urlAPi = process.env.URL_BASE + `weather?lat=-27.7&lon=-60.8778&appid=${process.env.API_KEY}&units=metric`
+const urlAPiWeather = process.env.URL_BASE_OPENWEATHERMAP + `weather?lat=-27.7&lon=-60.8778&appid=${process.env.API_KEY_OPENWEATHERMAP}&units=metric`
 
 
 router.get('/current/city', async (req, res) => {

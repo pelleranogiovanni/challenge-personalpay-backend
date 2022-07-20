@@ -1,16 +1,14 @@
-const axios = require('axios');
-
-const ipAPi = 'http://ip-api.com/json/';
+const service = require('../services/ipApiService');
 
 const getLocation = async (req, res) => {
     try {
         let ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
-        const response = await axios.get(`${ipAPi}${ip}`);
+        
+        const location = await service.getLocationWithIp(ip);
         
         res.json({
-            status: response.status,
-            data: response.data,
-            ip: ip
+            status: location.status,
+            data: location.data,
         })
 
     } catch (error) {
