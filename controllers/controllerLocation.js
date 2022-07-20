@@ -5,11 +5,11 @@ const getLocation = async (req, res) => {
         let ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
         
         const location = await service.getLocationWithIp(ip);
-        
-        res.json({
-            status: location.status,
-            data: location,
-        })
+        res.json(location);
+        // res.json({
+        //     status: location.status,
+        //     data: location,
+        // })
 
     } catch (error) {
         console.error(error);
