@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 const getLocation = require('../controllers/controllerLocation');
-
+var get_ip = require('ipware')().get_ip;
 
 const urlAPi = process.env.URL_BASE + `weather?lat=-27.7&lon=-60.8778&appid=${process.env.API_KEY}&units=metric`
 
@@ -39,9 +39,10 @@ router.get('/location', getLocation);
 
 
 router.get('/test', function (req, res, next) {
-  const remoteAddress = req.connection.remoteAddress;
-  // const hostName = os.hostname();
-  res.status(200).json({ remoteAddress });
+  let ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
+  res.json({
+    ip: ip,
+  })
 });
 
 module.exports = router;
