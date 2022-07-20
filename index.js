@@ -3,8 +3,7 @@ const bodyparser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-let distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+
 // capturar body
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
