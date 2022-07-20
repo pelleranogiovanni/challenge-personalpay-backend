@@ -37,4 +37,11 @@ router.get('/location', getLocation);
 //     }
 // });
 
+
+router.get('/test', function (req, res, next) {
+  const remoteAddress = req.connection.remoteAddress;
+  // const hostName = os.hostname();
+  res.status(200).json({ remoteAddress });
+});
+
 module.exports = router;
