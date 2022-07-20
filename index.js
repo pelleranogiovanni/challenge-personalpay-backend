@@ -12,7 +12,7 @@ app.use(bodyparser.json());
 const appRoutes = require('./routes/routes');
 
 // route middlewares
-app.use('/v1/', appRoutes);
+app.use('/api/v1/', appRoutes);
 
 app.get('/', (req, res) => {
     res.json({
