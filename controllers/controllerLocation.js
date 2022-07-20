@@ -4,12 +4,12 @@ const ipAPi = 'http://ip-api.com/json/';
 
 const getLocation = async (req, res) => {
     try {
-        const response = await axios.get(`${ipAPi}${req.socket.remoteAddress}`);
+        const response = await axios.get(`${ipAPi}${req.connection.remoteAddress}`);
         
         res.json({
             status: response.status,
             data: response.data,
-            url: req.connection.remoteAddress
+            ip: `${ipAPi}${req.connection.remoteAddress}`
         })
 
     } catch (error) {
