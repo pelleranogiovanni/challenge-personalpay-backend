@@ -4,7 +4,7 @@ const ipAPi = 'http://ip-api.com/json/';
 
 const getLocation = async (req, res) => {
     try {
-        const response = await axios.get(`${ipAPi}${req.connection.remoteAddress}`);
+        const response = await axios.get(`${ipAPi}${req.ip}`);
         
         res.json({
             status: response.status,
