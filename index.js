@@ -4,25 +4,25 @@ require('dotenv').config();
 
 const app = express();
 
-// capturar body
+// Capturar body
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 // Routes
 const appRoutes = require('./routes/routes');
 
-// route middlewares
+// Route middlewares
 app.use('/v1/', appRoutes);
 
 app.get('/', (req, res) => {
     res.json({
         estado: true,
-        mensaje: 'funciona!'
+        mensaje: 'Success'
     })
 });
 
-// iniciar server
+// Iniciar server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`servidor corriendo en: ${PORT}`)
+    console.log(`Servidor corriendo en: ${PORT}`)
 })

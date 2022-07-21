@@ -7,12 +7,11 @@ const getLocation = async (req, res) => {
         const location = await service.getLocationWithIp(ip);
         
         res.json({
-            status: location.status,
             data: location,
         })
 
     } catch (error) {
-        console.error(error);
+        res.json(error);
     }
   
 }

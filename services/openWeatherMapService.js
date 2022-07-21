@@ -15,4 +15,15 @@ const getCurrentWeatherWithLocation = async (lat, lon) => {
 }
 
 
-module.exports = {getCurrentWeatherWithCity, getCurrentWeatherWithLocation};
+const getWeekWeatherWithCity = async (city) => {
+    const response = await axios.get(`${urlBase}forecast?q=${city}&units=metric&appid=${process.env.API_KEY_OPENWEATHERMAP}`);
+    return response.data;
+}
+
+const getWeekWeatherWithLocation = async (lat, lon) => {
+
+    const response = await axios.get(`${urlBase}forecast?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.API_KEY_OPENWEATHERMAP}`);  
+    return response.data;
+}
+
+module.exports = {getCurrentWeatherWithCity, getCurrentWeatherWithLocation, getWeekWeatherWithCity, getWeekWeatherWithLocation};
