@@ -33,13 +33,13 @@ Si se va a probar de forma local:
 ```
 curl --location --request GET 'http://localhost:3000/v1/location' \
 --header 'x-forwarded-for: 181.13.173.3'
-curl --location --request GET 'http://localhost:3000/v1/current' \
+curl --current --request GET 'http://localhost:3000/v1/current' \
 --header 'x-forwarded-for: 181.13.173.3'
-curl --location --request GET 'http://localhost:3000/v1/current?city=Villa Angela' \
+curl --current with city --request GET 'http://localhost:3000/v1/current?city=Villa Angela' \
 --header 'x-forwarded-for: 181.13.173.3'
-curl --location --request GET 'http://localhost:3000/v1/forecast' \
+curl --forecast --request GET 'http://localhost:3000/v1/forecast' \
 --header 'x-forwarded-for: 181.13.173.3'
-curl --location --request GET 'http://localhost:3000/v1/forecast?city=Villa Angela' \
+curl --forecast with city --request GET 'http://localhost:3000/v1/forecast?city=Villa Angela' \
 --header 'x-forwarded-for: 181.13.173.3'
 ```
 ## ENTORNO DE PRUEBA
