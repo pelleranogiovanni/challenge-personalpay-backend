@@ -1,6 +1,5 @@
 const axios = require('axios');
 const urlBase = process.env.URL_BASE_OPENWEATHERMAP;
-const urlAPiWeather = process.env.URL_BASE_OPENWEATHERMAP + `weather?lat=-27.7&lon=-60.8778&appid=${process.env.API_KEY_OPENWEATHERMAP}&units=metric`
 
 const getCurrentWeatherWithCity = async (city) => {
     

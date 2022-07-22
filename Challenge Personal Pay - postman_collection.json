@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "d17fdcee-5c6b-435c-b14d-3ff9def5a588",
+		"name": "Challenge Personal Pay - Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20614378"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-forwarded-for",
+						"value": "181.13.173.3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/v1/location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current Weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-forwarded-for",
+						"value": "181.13.173.3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/v1/current?city=Villa Angela",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"current"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Villa Angela"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Weekly Weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-forwarded-for",
+						"value": "181.13.173.3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/v1/forecast?city=Villa Angela",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Villa Angela"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
