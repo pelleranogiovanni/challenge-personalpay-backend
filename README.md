@@ -1,16 +1,10 @@
 <h1 align="center">PERSONAL PAY</h1>
-<h2 align="center">Developer Applicant Interview Test</h2>
-<h3 align="center">Backend</h3>
+<h2 align="center">Developer Applicant Interview Test - Backend</h2>
 
 
 ## INSTALAR DEPENDENCIAS 
 ```
 npm i
-```
-
-## CORRER SERVER
-```
-npm run dev
 ```
 
 ## VARIABLES DE ENTORNO 
@@ -21,6 +15,11 @@ PORT
 API_KEY_OPENWEATHERMAP (key de la api de openweathermap.org)
 URL_BASE_OPENWEATHERMAP="https://api.openweathermap.org/data/2.5/"
 URL_BASE_IPAPI="http://ip-api.com/json/"
+```
+
+## CORRER SERVER
+```
+npm run dev
 ```
 
 ## CONSIDERACIONES 
@@ -47,6 +46,7 @@ curl --location --request GET 'http://localhost:3000/v1/forecast?city=Villa Ange
 ```
 El servicio ya se desplegó a heroku para que se pueda utilizar y probar 
 https://challenge-personalpay-backend.herokuapp.com/
+
 curl de prueba en heroku
 curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/location' 
 curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/current' 
