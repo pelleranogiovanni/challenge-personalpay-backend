@@ -26,7 +26,7 @@ npm run dev
 ```
 Si se va a probar de forma local: 
     - Agregar el header "x-forwarded-for" con alguna ip de prueba
-    - O bien, utilziar la coleción de Postman que se encuentra en la raiz del proyecto
+    - O bien, utilziar la colección de Postman que se encuentra en la raiz del proyecto
 ```
 
 ## CURL DE EJEMPLOS
@@ -49,8 +49,8 @@ https://challenge-personalpay-backend.herokuapp.com/
 
 curl de prueba en heroku
 curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/location' 
-curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/current' 
-curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/current?city=Villa Angela' 
-curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/forecast' 
-curl --location --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/forecast?city=Villa%20Angela'
+curl --current --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/current' 
+curl --current with city --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/current?city=Villa Angela' 
+curl --forecast --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/forecast' 
+curl --forecast with city --request GET 'https://challenge-personalpay-backend.herokuapp.com/v1/forecast?city=Villa%20Angela'
 ```
