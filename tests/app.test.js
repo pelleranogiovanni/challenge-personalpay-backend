@@ -32,7 +32,7 @@ test('responds with current weather by city', async () => {
 
 
 test('responds with week weather by city', async () => {
-    const response = await api.get('/v1/forecast?city=asdasd')
+    const response = await api.get('/v1/forecast?city=Villa Angela')
       .set('Accept', 'application/json')
       .expect('Content-Type', /application\/json/)
       .expect(200)
