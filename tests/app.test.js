@@ -23,3 +23,21 @@ test('response IP and valid city', async () => {
 });
 
 
+test('responds with current weather by city', async () => {
+    const response = await api.get('/v1/current/'+cityTest)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /application\/json/)
+      .expect(200)
+});
+
+
+test('responds with week weather by city', async () => {
+    const response = await api.get('/v1/forecast?city=asdasd')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /application\/json/)
+      .expect(200)
+});
+
+
+
+
